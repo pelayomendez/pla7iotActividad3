@@ -1,6 +1,12 @@
 # pla7iotActividad3
 PLA7 Actividad 3 Curso iOT
 
+Este repositorio contiene el código necesario para la Actividad 3 del pla7 del Curso IOT UOC2019.
+
+Para comenzar a utilizarlo clonar el repositorio en la carpeta del servidor del grupo.
+````
+/var/pla7iotActividad3
+````
 
 ## Servidor TCP ECHO
 
