@@ -2,20 +2,22 @@
 PLA7 Actividad 3 Curso iOT
 
 
-Servidor ECHO
+## Servidor TCP ECHO
 
-* Para instalar como servicio:
+### Instalando el servidor como servicio de sistema en Ubuntu 18.04LTS
 
 Damos permisos de ejecución al archivo:
-
+````
 chmod +x startserver.sh
+````
 
 Creamos el archivo:
-``
+````
 /etc/systemd/system/echoserveriot.service
-``
+````
+
 Con el contenido:
-``
+````
 [Unit]
 Description=IOT Course Echo Server
 After=syslog.target
@@ -31,17 +33,20 @@ StandardError=syslog
 
 [Install]
 WantedBy=multi-user.target
-``
+````
 
-Cargamos el script con:
-
+Cargamos el nuevo servicio en el gestor del sistema:
+````
 systemctl enable echoserveriot.service
 systemctl daemon-reload
+````
 
 Lo arrancamos:
-
+````
 systemctl start echoserveriot.service
+````
 
-Vemos su status:
-
+Podemos comprobar su estado con:
+````
 systemctl status echoserveriot.service
+````
